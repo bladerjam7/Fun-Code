@@ -1,0 +1,68 @@
+package test;
+
+import java.util.Scanner;
+
+public class main {
+
+	
+	public final static String philosophy = "CODING PHILOSOPHY";
+
+    private static  String overall = "";
+    
+	public static void main(String[] args) {
+		String exclamationMarks;
+	    Scanner scanner = new Scanner(System.in);
+	
+	    System.out.println("Enter a number: ");
+	    exclamationMarks = scanner.nextLine();
+
+	    int count = Integer.parseInt(exclamationMarks);
+	
+	    if (overall.replaceAll("\\s+", "") == ""){
+	    	String firstWord = getFirst();
+	    	
+	    	String SecondWord = getSecond();
+	    	
+	    	String ThirdWord = getThird();
+	    	
+	    	System.out.print(firstWord + " " + SecondWord + " " + ThirdWord + " ");
+	    	
+	    	
+	    	
+	    }
+	    
+	    while(count > 0) {
+    		System.out.print("!");
+    		count --;
+    	}
+	}
+
+
+
+	private static String getFirst() {
+		return "Always";
+	}
+
+	private static String getSecond() {
+		String word = "gnidoc ekam";
+		char[] wordArray = word.toCharArray();
+		String newWords = "";
+		
+		for (int i = wordArray.length - 1; i >= 0; i--) {
+			newWords += String.valueOf(wordArray[i]);
+			
+		}
+		return newWords;
+	}
+	
+	private static String getThird() {
+		int num[] = {70,85,78};
+		
+		String str = "";
+        for(int i: num){
+            str += Character.toString((char)i);       
+        }
+		return str;
+	}
+	
+}
